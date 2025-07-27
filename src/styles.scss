@@ -1,0 +1,29 @@
+:root {
+ 
+  --cor-fonte-principal: #732c02;
+  --cor-fonte-alternativa: ghostwhite;
+  --cor-fundo-principal: ghostwhite;
+  --cor-fundo-alternativa: #732c02;
+  --cor-fundo-alt-suave: rgba(168, 168, 167, 0.7);
+  --cor-verde-brilhante: #b3f229;
+  --cor-alerta: #bf3604;
+
+  *|* {
+    color: var(--cor-fonte-principal);
+    font-family: "Mystery Quest", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--cor-fundo-principal);
+    font-size: 24px;
+
+    h1 {
+      font-family: "Caesar Dressing", system-ui;
+      font-weight: 0;
+      font-style: normal;
+      font-size: 32px;
+      text-align: center;
+      width: 100%;
+      margin: 300px auto;
+    }
+  }
+}

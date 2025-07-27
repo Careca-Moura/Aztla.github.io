@@ -1,0 +1,86 @@
+<header class="container-inline">
+  <h2 class="identificador-titulo">
+    Construa a ficha do seu personagem preenchendo abaixo:
+  </h2>
+  <form class="form__identificador" #form="ngForm" (ngSubmit)="gravarIdentificador()">
+    <div class="form__identificador__div1">
+      <label class="form__identificador__label" for="nome">Nome: </label>
+      <input
+        class="form__identificador__div1__nome"
+        id="nome"
+        name="nome"
+        type="text"
+        placeholder="Nome do personagem"
+        [(ngModel)]="nome"
+      />
+      <label for="jogador">Jogador: </label>
+      <input
+        class="form__identificador__div1__jogador"
+        id="jogador"
+        name="jogador"
+        type="text"
+        placeholder="Digite seu nome"
+        [(ngModel)]="jogador"
+      />
+      <label for="nivel">Nível: </label>
+      <input
+        class="form__identificador__div1__nivel"
+        id="nivel"
+        name="nivel"
+        type="number"
+        max="10"
+        min="1"
+        step="1"
+        [(ngModel)]="nivel"
+      />
+    </div>
+    <div class="form__identificador__div2">
+      <label for="raça">Raça: </label>
+      <select
+        class="form__identificador__div2__raça"
+        name="raca"
+        id="raca"
+        [(ngModel)]="raca"
+        (ngModelChange)="preencheArquetipos(raca)"
+      >
+        <option value="cornico">Córnico</option>
+        <option value="chirimanta">Chirimanta</option>
+        <option value="jabali">Jabali</option>
+        <option value="lunatico">Lunático</option>
+        <option value="vishaal">Vishaal</option>
+        <option value="selkie">Selkie</option>
+      </select>
+      <label for="arquetipo">Arquétipo: </label>
+      <select
+        class="form__identificador__div2__arquetipo"
+        id="arquetipo"
+        name="arquetipo"
+        type="select"
+        [(ngModel)]="arquetipo"
+        (ngModelChange)="preencheCaminho(arquetipo)"
+      >
+        <option value="combatente">Combatente</option>
+        <option value="conjurador">Conjurador</option>
+        <option value="especialista">especialista</option>
+      </select>
+      <label for="totem">Totem: </label>
+      <output
+        class="form__identificador__div3__totem"
+        id="totem"
+        name="totem"
+        for="raça"
+        >{{ this.totem }}</output
+      >
+      <label for="caminho">Caminho totêmico: </label>
+      <output
+        id="caminho"
+        name="caminho"
+        for="arquetipo raca"
+        class="form__identificador__div3__caminho"
+      >
+        {{ this.caminho }}
+      </output>
+      <button name="envio" type="submit">Confirme</button>
+    </div>
+  </form>
+</header>

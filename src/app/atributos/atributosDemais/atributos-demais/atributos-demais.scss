@@ -1,0 +1,45 @@
+.atb__demais {
+  margin: 25px 0;
+  display: inline-block;
+  width: 50%;
+
+  p {
+    text-align: center;
+    font-size: 24px;
+    background-color: transparent;
+  }
+  .ferimentos {
+    width: 100%;
+    height: max-content;
+
+    p {
+      position: sticky;
+      margin: 0 5%;
+      color: var(--cor-fonte-principal);
+      background-color: inherit;
+      font-weight: bold;
+
+    }
+    &__leve {
+      background-color: rgb(144, 238, 144);
+
+      width: 25%;
+      height: max-content;
+    }
+    &__moderado {
+      background-color: lightyellow;
+      opacity: 0.5;
+      width: 25%;
+    }
+    &__severo {
+      background-color: lightsalmon;
+      opacity: 0.5;
+      width: 25%;
+    }
+    &__mortal {
+      background-color: lightcoral;
+      opacity: 0.5;
+      width: 25%;
+    }
+  }
+}

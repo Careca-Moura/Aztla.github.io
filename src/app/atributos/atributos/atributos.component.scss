@@ -1,0 +1,41 @@
+.atb__form {
+  background-color: rgba(white, 0.8);
+  background: border-box;
+  margin-top: 3%;
+  &__label {
+    text-align: right;
+    background-color: transparent;
+  }
+  &__entrada {
+    width: fit-content;
+    background-color: transparent;
+  }
+  &__saida {
+    padding: 2px 2px;
+    text-align: center;
+    background-color: transparent;
+    /*var(--cor-fundo-alternativa)*/
+  }
+}
+.atb__table {
+  &__head {
+    td {
+      text-align: center;
+      background-color: var(--cor-fundo-alternativa);
+      color: var(--cor-fonte-alternativa);
+      border-radius: 3px;
+      padding: 0.5em;
+    }
+  }
+  &__body {
+    /*border: 3px, double, var(--cor-alerta);*/
+    border-radius: 2px;
+    display: contents;
+    td {
+      color: var(--cor-verde-brilhante);
+      width: fit-content;
+      background-color: var(--cor-fundo-alt-suave);
+    }
+  }
+}
+

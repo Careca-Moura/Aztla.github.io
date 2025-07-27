@@ -1,0 +1,60 @@
+<div class="atb__demais">
+  <div class="row ferimentos">
+    <p>Níveis de Ferimentos</p>
+    <div class="col-sm-1 ferimentos__leve">
+      <p>Leve</p>
+      <div class="panel">
+        <div class="div__leve">
+          <label for="leveBase">Saúde Total: </label>
+          <output name="leveBase">{{ saudeTotal }}</output>
+        </div>
+        <div>
+          <label for="leveAtual">Saúde atual</label>
+          <input name="leveAtual" [(ngModel)]="leveAtual" type="number" min="0" [max]="saudeTotal"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-1 ferimentos__moderado">
+      <p>Moderado</p>
+      <div class="panel">
+        <div class="div__moderado">
+          <label for="moderadoBase">Saúde Total: </label>
+          <output name="moderadoBase">{{ saudeTotal }}</output>
+        </div>
+        <div>
+          <label for="moderadoAtual">Saúde atual</label>
+          <input name="moderadoAtual" [(ngModel)]="moderadoAtual" type="number" min="0" [max]="saudeTotal" />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-1 ferimentos__severo">
+      <p>Severo</p>
+      <div class="panel">
+        <div class="div__severo">
+          <label   for="severoBase">Saúde Total: </label>
+          <output name="severoBase">{{ saudeTotal }}</output>
+        </div>
+        <div>
+          <label  for="severoAtual">Saúde atual</label>
+          <input name="severoAtual" [(ngModel)]="severoAtual" type="number" min="0" [max]="saudeTotal" />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-1 ferimentos__mortal">
+      <p>Mortal</p>
+      <div class="panel">
+        <div class="div__mortal">
+          <label   for="MortalBase">Saúde Total: </label>
+          <output name="MortalBase">{{ saudeTotal }}</output>
+        </div>
+        <div>
+          <label  for="MortalAtual">Saúde atual</label>
+          <input name="MortalAtual" [(ngModel)]="mortalAtual" type="number" min="0" [max]="saudeTotal" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

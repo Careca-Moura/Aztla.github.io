@@ -1,0 +1,44 @@
+.container-inline {
+  
+
+
+  .form__identificador {
+
+    &__div1 {
+      display: inline-block;
+      width: 100%;
+      background-color: transparent;
+      &__nome,
+      &__jogador {
+        width: 30%;
+        margin: 5px 2px;
+      }
+      &__nivel {
+        width: 5%;
+        text-align: center;
+      }
+    }
+    &__div2 {
+      display: inline;
+      background-color: transparent;
+      &__raça,
+      &__arquetipo {
+        width: min-content;
+           margin: 0 1%;
+      }
+
+    }
+    &__div3 {
+        width: 33%;
+        display: inline;
+
+        &__totem,
+        &__caminho {
+          width: fit-content;
+          margin: 0 1%;
+          padding: 1px;
+
+        }
+      }
+  }
+}

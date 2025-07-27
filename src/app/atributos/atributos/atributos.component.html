@@ -1,0 +1,204 @@
+<div class="Atb">
+  <form class="atb__form" #form="ngForm" (ngSubmit)="gravarAtributos()">
+    <table class="atb__form__table">
+      <thead class="atb__table__head">
+        <td>Atributo</td>
+        <td>Rank</td>
+        <td>Bônus</td>
+      </thead>
+      <tbody class="atb__table__body">
+        <tr>
+          <td>
+            <label class="atb__form__label" for="forcaEscolhido">Força</label>
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="forcaEscolhido"
+              id="forcaEscolhido"
+              [(ngModel)]="forcaEscolhido"
+            >
+              <option *ngFor="let item of capturaLista('forca')" [value]="item">
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida">{{
+              capturaBonus(forcaEscolhido)
+            }}</output>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="atb__form__label" for="agilidadeEscolhido"
+              >Agilidade</label
+            >
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="agilidadeEscolhido"
+              id="agilidadeEscolhido"
+              [(ngModel)]="agilidadeEscolhido"
+            >
+              <option
+                *ngFor="let item of capturaLista('agilidade')"
+                [value]="item"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida">{{
+              capturaBonus(agilidadeEscolhido)
+            }}</output>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="atb__form__label" for="vigorEscolhido">Vigor</label>
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="vigorEscolhido"
+              id="vigorEscolhido"
+              [(ngModel)]="vigorEscolhido"
+            >
+              <option *ngFor="let item of capturaLista('vigor')" [value]="item" >
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida" onchange="" >{{
+              capturaBonus(vigorEscolhido)
+            }}</output>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="atb__form__label" for="astuciaEscolhido"
+              >Astúcia</label
+            >
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="astuciaEscolhido"
+              id="astuciaEscolhido"
+              [(ngModel)]="astuciaEscolhido"
+            >
+              <option
+                *ngFor="let item of capturaLista('astucia')"
+                [value]="item"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida">{{
+              capturaBonus(astuciaEscolhido)
+            }}</output>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="atb__form__label" for="sabedoriaEscolhido"
+              >Sabedoria</label
+            >
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="sabedoriaEscolhido"
+              id="sabedoriaEscolhido"
+              [(ngModel)]="sabedoriaEscolhido"
+            >
+              <option
+                *ngFor="let item of capturaLista('sabedoria')"
+                [value]="item"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida">{{
+              capturaBonus(sabedoriaEscolhido )
+            }}</output>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="atb__form__label" for="vontadeEscolhido"
+              >Vontade</label
+            >
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="vontadeEscolhido"
+              id="vontadeEscolhido"
+              [(ngModel)]="vontadeEscolhido"
+            >
+              <option
+                *ngFor="let item of capturaLista('vontade')"
+                [value]="item"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida">{{
+              capturaBonus(vontadeEscolhido)
+            }}</output>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="atb__form__label" for="animismoEscolhido"
+              >Animismo</label
+            >
+          </td>
+          <td>
+            <select
+              class="atb__form__entrada"
+              name="animismoEscolhido"
+              id="animismoEscolhido"
+              [(ngModel)]="animismoEscolhido"
+            >
+              <option
+                *ngFor="let item of capturaLista('animismo')"
+                [value]="item"
+              >
+                {{ item }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <output class="atb__form__saida">{{
+              capturaBonus(animismoEscolhido)
+            }}</output>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit">Confirmar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+</div>
